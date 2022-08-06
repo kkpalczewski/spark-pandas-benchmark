@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
 
 
-def warm_up_1(session: SparkSession):
+def main(session: SparkSession):
     """
     Find out how many orders, how many products and how many sellers are in the data.
     How many products have been sold at least once?
@@ -37,4 +37,4 @@ if __name__ == '__main__':
         .appName("Exercise1") \
         .getOrCreate()
 
-    warm_up_1(spark)
+    main(spark)
